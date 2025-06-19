@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - DevFolio Bootstrap Template</title>
+  <title id="page-title">Index - DevFolio Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:</ul>ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,27 +49,34 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#about">A Propos</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Ref</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#hero" class="active" id="nav-accueil">Accueil<br></a></li>
+          <li><a href="#about" id="nav-about">A Propos</a></li>
+          <li><a href="#portfolio" id="nav-projets">Projets</a></li>
+          <li class="dropdown" id="nav-ref"><a href="#"><span>Ref</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#" id="dropdown-1">Dropdown 1</a></li>
+          <li class="dropdown" id="deep-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+          <li><a href="#" id="deep-dropdown-1">Deep Dropdown 1</a></li>
+          <li><a href="#" id="deep-dropdown-2">Deep Dropdown 2</a></li>
+          <li><a href="#" id="deep-dropdown-3">Deep Dropdown 3</a></li>
+          <li><a href="#" id="deep-dropdown-4">Deep Dropdown 4</a></li>
+          <li><a href="#" id="deep-dropdown-5">Deep Dropdown 5</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="dropdown-2">Dropdown 2</a></li>
+          <li><a href="#" id="dropdown-3">Dropdown 3</a></li>
+          <li><a href="#" id="dropdown-4">Dropdown 4</a></li>
+        </ul>
+          </li>
+          <li><a href="#contact" id="nav-contact">Contact</a></li>
+          <li class="dropdown" id="nav-lang">
+        <a href="#"><span id="lang-label">Langue</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#" onclick="setLanguage('fr')" id="lang-fr">Français</a></li>
+          <li><a href="#" onclick="setLanguage('en')" id="lang-en">English</a></li>
+        </ul>
+          <li><a href="#" onclick="toggleDarkMode()">Changer de thème</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -186,7 +193,7 @@
                 <li><i class="bi bi-check-circle"></i> Compétences en présentation</li>
               </ul>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </section>
@@ -207,45 +214,59 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Education</h3>
+
             <div class="resume-item">
-                <h4>Epitech</h4>
-                <h5>2021 - 2023</h5>
-                <p><em>Epitech, Nice</em></p>
-                <p>Formation axée sur les nouvelles technologies et l'innovation, avec un accent sur le développement de projets concrets et l'apprentissage pratique.</p>
+              <h4 id="edu-but">BUT Informatique</h4>
+              <h5 id="edu-but-dates">2023 - 2026</h5>
+              <p><em id="edu-but-loc">Université de Nice</em></p>
+              <ul id="edu-but-tasks">
+                <li id="edu-but-1">Réalisé un projet de site web e-commerce en groupe, avec une base de données MySQL et une interface en HTML/CSS/JS.</li>
+                <li id="edu-but-2">Participé à des ateliers sur la cybersécurité, incluant la création de scripts de détection d'intrusion réseau.</li>
+                <li id="edu-but-3">Stage de 8 semaines dans une PME où j’ai développé un tableau de bord d'analyse de données avec Python.</li>
+                <li id="edu-but-4">Alternance valorisée par l’application directe des enseignements en entreprise sur des projets réels.</li>
+              </ul>
             </div><!-- End Resume Item -->
 
             <div class="resume-item">
-                <h4>BUT Informatique</h4>
-                <h5>2023 - 2026</h5>
-                <p><em>Université de Nice</em></p>
-                <p>Programme couvrant les bases de l'informatique, de la programmation à la gestion de bases de données, en passant par le développement web et mobile.</p>
-            </div><!-- End Resume Item -->
+              <h4 id="edu-epi">Epitech</h4>
+              <h5 id="edu-epi-dates">2021 - 2023</h5>
+              <p><em id="edu-epi-loc">Epitech, Nice</em></p>
+              <ul id="edu-epi-tasks">
+                <li id="edu-epi-1">Créé un jeu multijoueur type RPG en C avec gestion de serveur et protocoles réseau simples.</li>
+                <li id="edu-epi-2">Travaillé sur un projet fullstack utilisant Node.js et React, dans le cadre d’un hackathon de 48h.</li>
+                <li id="edu-epi-3">Contribué à un outil open-source permettant l’automatisation de tests en ligne de commande.</li>
+                <li id="edu-epi-4">Développé des compétences en gestion de versions avec Git et résolution de conflits en environnement collaboratif.</li>
+              </ul>
+            </div>
 
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-                <h4>Serveur au restaurant plage Le Galet</h4>
-                <h5>2019 - Présent</h5>
-                <p><em>Le Galet, Nice, France</em></p>
-                <ul>
-                    <li>Accueillir et installer les clients, prendre les commandes et servir les plats et boissons.</li>
-                    <li>Assurer un service de qualité et veiller à la satisfaction des clients.</li>
-                    <li>Gérer les paiements et la caisse.</li>
-                    <li>Participer à la mise en place et au nettoyage du restaurant.</li>
-                </ul>
-            </div><!-- End Resume Item -->
+            <h3 class="resume-title">Expériences Professionelles</h3>
 
             <div class="resume-item">
-                <h4>Régie Eau D'Azur</h4>
-                <h5>Alternance 2023-2026</h5>
-                <p><em>Régie Eau D'Azur, Nice</em></p>
-                <p>
-                  La Régie Eau D'Azur (REA) est une entreprise publique locale spécialisée dans la gestion de l'eau potable et des eaux usées dans la région niçoise.
-                  Mon expérience en alternance chez REA se concentre principalement sur le développement d'applications et de sites web pour améliorer l'efficacité opérationnelle et la communication de l'entreprise. 
-                </p>
-            </div><!-- End Resume Item -->
+              <h4 id="exp-eau">Régie Eau D'Azur</h4>
+              <h5 id="exp-eau-dates">Alternance 2023-2026</h5>
+              <p><em id="exp-eau-loc">Régie Eau D'Azur, Nice</em></p>
+              <ul id="exp-eau-tasks">
+                <li id="exp-eau-1">Participation à la refonte du portail interne pour les agents, permettant une centralisation des demandes et une réduction du temps de traitement de 30%.</li>
+                <li id="exp-eau-2">Création d'outils en C# et SQL Server pour automatiser le suivi des interventions sur le réseau hydraulique.</li>
+                <li id="exp-eau-3">Modernisation des supports de communication en ligne utilisés par les différents départements techniques.</li>
+                <li id="exp-eau-4">Amélioration de la collaboration entre services via une application de tickets intégrée dans Microsoft Teams.</li>
+              </ul>
+            </div>
+            
+            <div class="resume-item">
+              <h4 id="exp-galet">Serveur au restaurant plage Le Galet</h4>
+              <h5 id="exp-galet-dates">2019 - Présent</h5>
+              <p><em id="exp-galet-loc">Le Galet, Nice, France</em></p>
+              <ul id="exp-galet-tasks">
+                <li id="exp-galet-1">Accueilli en moyenne plus de 200 clients par jour pendant la saison estivale, assurant un service fluide et personnalisé.</li>
+                <li id="exp-galet-2">Mis en place un système de communication entre cuisine et salle pour réduire les erreurs de commande.</li>
+                <li id="exp-galet-3">Formé de nouveaux serveurs à la gestion de la clientèle étrangère, améliorant l'expérience client internationale.</li>
+                <li id="exp-galet-4">Géré les encaissements et la clôture des caisses sans erreur pendant 3 étés consécutifs.</li>
+              </ul>
+            </div>
 
           </div>
 
@@ -487,7 +508,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designé par <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 

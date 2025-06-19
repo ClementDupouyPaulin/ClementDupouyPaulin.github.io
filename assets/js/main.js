@@ -248,4 +248,54 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  window.setLanguage = function(lang) {
+    const t = {
+      fr: {
+        "exp-eau-1": "Participation à la refonte du portail interne pour les agents, permettant une centralisation des demandes et une réduction du temps de traitement de 30%.",
+        "exp-eau-2": "Création d'outils en C# et SQL Server pour automatiser le suivi des interventions sur le réseau hydraulique.",
+        "exp-eau-3": "Modernisation des supports de communication en ligne utilisés par les différents départements techniques.",
+        "exp-eau-4": "Amélioration de la collaboration entre services via une application de tickets intégrée dans Microsoft Teams.",
+        "exp-galet-1": "Accueilli en moyenne plus de 200 clients par jour pendant la saison estivale, assurant un service fluide et personnalisé.",
+        "exp-galet-2": "Mis en place un système de communication entre cuisine et salle pour réduire les erreurs de commande.",
+        "exp-galet-3": "Formé de nouveaux serveurs à la gestion de la clientèle étrangère, améliorant l'expérience client internationale.",
+        "exp-galet-4": "Géré les encaissements et la clôture des caisses sans erreur pendant 3 étés consécutifs.",
+        "edu-but-1": "Réalisé un projet de site web e-commerce en groupe, avec une base de données MySQL et une interface en HTML/CSS/JS.",
+        "edu-but-2": "Participé à des ateliers sur la cybersécurité, incluant la création de scripts de détection d'intrusion réseau.",
+        "edu-but-3": "Stage de 8 semaines dans une PME où j’ai développé un tableau de bord d'analyse de données avec Python.",
+        "edu-but-4": "Alternance valorisée par l’application directe des enseignements en entreprise sur des projets réels.",
+        "edu-epi-1": "Créé un jeu multijoueur type RPG en C avec gestion de serveur et protocoles réseau simples.",
+        "edu-epi-2": "Travaillé sur un projet fullstack utilisant Node.js et React, dans le cadre d’un hackathon de 48h.",
+        "edu-epi-3": "Contribué à un outil open-source permettant l’automatisation de tests en ligne de commande.",
+        "edu-epi-4": "Développé des compétences en gestion de versions avec Git et résolution de conflits en environnement collaboratif."
+      },
+      en: {
+        "exp-eau-1": "Redesigned the internal portal for agents, centralizing requests and reducing processing time by 30%.",
+        "exp-eau-2": "Built tools in C# and SQL Server to automate tracking of hydraulic network interventions.",
+        "exp-eau-3": "Modernized online communication materials used by various technical departments.",
+        "exp-eau-4": "Improved interdepartmental collaboration through a Microsoft Teams-integrated ticketing app.",
+        "exp-galet-1": "Welcomed over 200 clients daily during the summer season, ensuring smooth and personalized service.",
+        "exp-galet-2": "Implemented a communication system between kitchen and floor to reduce order errors.",
+        "exp-galet-3": "Trained new servers on handling international clients, improving customer satisfaction.",
+        "exp-galet-4": "Managed cash registers and end-of-day reports without error for three consecutive summers.",
+        "edu-but-1": "Developed a group e-commerce website project with MySQL database and HTML/CSS/JS interface.",
+        "edu-but-2": "Participated in cybersecurity workshops including creation of intrusion detection scripts.",
+        "edu-but-3": "Interned 8 weeks at a small business building a Python-based data analysis dashboard.",
+        "edu-but-4": "Applied university concepts directly in real business projects through apprenticeship.",
+        "edu-epi-1": "Built a multiplayer RPG game in C with server management and basic network protocols.",
+        "edu-epi-2": "Worked on a fullstack project using Node.js and React during a 48h hackathon.",
+        "edu-epi-3": "Contributed to an open-source tool for automating command-line tests.",
+        "edu-epi-4": "Developed strong version control skills with Git and conflict resolution in team settings."
+      }
+    };
+    const langMap = t[lang];
+    for (const key in langMap) {
+      const el = document.getElementById(key);
+      if (el) el.innerText = langMap[key];
+    }
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
 })();

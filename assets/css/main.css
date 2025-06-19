@@ -1606,3 +1606,34 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Dark-mode : on bascule simplement les variables.
+   Rien d’autre à toucher dans le reste du fichier.  */
+body.dark-mode {
+  /* Couleurs d’arrière-plan & de texte  */
+  --background-color: #121212;
+  --default-color: #d0d0d0;
+  --heading-color: #ffffff;
+
+  /* Couleur d’accent (liens, boutons, barres de progression…) */
+  --accent-color: #64b5f6;
+
+  /* Navigation */
+  --nav-color: var(--default-color);
+  --nav-hover-color: #ffffff;
+
+  --nav-dropdown-background-color: #1e1e1e;
+  --nav-dropdown-color: var(--default-color);
+  --nav-dropdown-hover-color: var(--accent-color);
+
+  /* Footer & sections colorées (alt-background)  */
+  --alt-background-color: #0d47a1;
+}
+
+/* EXEMPLE facultatif : éclaircir la barre de nav en dark-mode
+   (gardez si vous aimez, sinon supprimez) */
+body.dark-mode .header {
+  --background-color: #000000;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+}
